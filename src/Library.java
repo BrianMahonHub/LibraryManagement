@@ -62,7 +62,8 @@ public class Library extends JFrame {
 		JButton btnLibrarianLogin = new JButton("Login as Librarian");
 		btnLibrarianLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			//Send to LibrarianLogin
+				LibrarianLogin.main(new String[]{});
+				frame.dispose();
 			}
 		});
 		btnLibrarianLogin.setFont(new Font("Tahoma", Font.PLAIN, 15));
