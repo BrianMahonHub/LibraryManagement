@@ -53,8 +53,8 @@ public class Library extends JFrame {
 		JButton btnAdminLogin = new JButton("Login as Administrator");
 		btnAdminLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			//Send to AdminLogin
-			frame.dispose();
+				AdminLogin.main(new String[]{});
+				frame.dispose();
 			}
 		});
 		btnAdminLogin.setFont(new Font("Tahoma", Font.PLAIN, 15));
