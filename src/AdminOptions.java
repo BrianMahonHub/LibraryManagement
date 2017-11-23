@@ -75,6 +75,8 @@ public class AdminOptions extends JFrame {
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Library.main(new String[]{});
+				frame.dispose();
 			}
 		});
 		btnLogout.setFont(new Font("Tahoma", Font.PLAIN, 15));
