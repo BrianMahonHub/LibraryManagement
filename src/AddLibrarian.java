@@ -96,6 +96,8 @@ public class AddLibrarian extends JFrame {
 		JButton btnBack = new JButton("Back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				AdminOptions.main(new String[]{});
+				frame.dispose();
 			}
 		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
