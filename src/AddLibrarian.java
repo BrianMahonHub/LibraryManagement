@@ -4,6 +4,8 @@ import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -89,6 +91,22 @@ public class AddLibrarian extends JFrame {
 		JButton btnNewButton = new JButton("Add Librarian");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			String name=textField.getText();
+			String password=String.valueOf(passwordField.getPassword());
+			String email=textField_1.getText();
+			String address=textField_2.getText();
+			String city=textField_3.getText();
+			String contact=textField_4.getText();
+
+			int i=LibrarianDao.add(name, password, email, address, city, contact);
+			if(i>0){
+				JOptionPane.showMessageDialog(AddLibrarian.this,"Librarian added successfully!");
+				AdminOptions.main(new String[]{});
+				frame.dispose();
+				
+			}else{
+				JOptionPane.showMessageDialog(AddLibrarian.this,"Sorry, unable to save!");
+			}
 			}
 		});
 		btnNewButton.setForeground(Color.DARK_GRAY);
