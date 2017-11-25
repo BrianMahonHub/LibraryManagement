@@ -54,6 +54,7 @@ public class AdminOptions extends JFrame {
 		JButton btnViewLibrarian = new JButton("View Librarian");
 		btnViewLibrarian.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ViewLibrarian.main(new String[] {});
 			}
 		});
 		btnViewLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
