@@ -62,6 +62,8 @@ public class AdminOptions extends JFrame {
 		JButton btnDeleteLibrarian = new JButton("Delete Librarian");
 		btnDeleteLibrarian.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				DeleteLibrarian.main(new String[]{});
+				frame.dispose();
 			}
 		});
 		btnDeleteLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
