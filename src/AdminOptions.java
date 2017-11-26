@@ -51,7 +51,7 @@ public class AdminOptions extends JFrame {
 			}
 		});
 
-		JButton btnViewLibrarian = new JButton("View Librarian");
+		JButton btnViewLibrarian = new JButton("View Librarians");
 		btnViewLibrarian.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ViewLibrarian.main(new String[] {});
