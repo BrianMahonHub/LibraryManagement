@@ -56,7 +56,7 @@ public class AddLibrarian extends JFrame {
 
 		JLabel lblAddLibrarian = new JLabel("Add Librarian");
 		lblAddLibrarian.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAddLibrarian.setForeground(Color.DARK_GRAY);
+		lblAddLibrarian.setForeground(Color.BLACK);
 		lblAddLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 20));
 
 		JLabel lblName = new JLabel("Name:");
