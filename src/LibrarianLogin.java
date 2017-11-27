@@ -4,6 +4,8 @@ import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -66,7 +68,18 @@ public class LibrarianLogin extends JFrame {
 		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// Deal with action
+				String name = textField.getText();
+				String password = String.valueOf(passwordField.getPassword());
+				// System.out.println(name+" "+password);
+				if (LibrarianDao.validate(name, password)) {
+					LibrarianOptions.main(new String[] {});
+					frame.dispose();
+				} else {
+					JOptionPane.showMessageDialog(LibrarianLogin.this, "Sorry, Username or Password Error",
+							"Login Error!", JOptionPane.ERROR_MESSAGE);
+					textField.setText("");
+					passwordField.setText("");
+				}
 			}
 		});
 
