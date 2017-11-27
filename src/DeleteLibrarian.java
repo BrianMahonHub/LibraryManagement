@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -53,6 +54,18 @@ public class DeleteLibrarian extends JFrame {
 		JButton btnDelete = new JButton("Remove Librarian");
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String sid=textField.getText();
+				if(sid==null||sid.trim().equals("")){
+					JOptionPane.showMessageDialog(DeleteLibrarian.this,"Id can't be blank");
+				}else{
+					int id=Integer.parseInt(sid);
+					int i=LibrarianDao.delete(id);
+					if(i>0){
+						JOptionPane.showMessageDialog(DeleteLibrarian.this,"Record deleted successfully!");
+					}else{
+						JOptionPane.showMessageDialog(DeleteLibrarian.this,"Unable to delete given id!");
+					}
+				}
 			}
 		});
 		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 13));
