@@ -51,6 +51,8 @@ public class LibrarianOptions extends JFrame {
 		JButton btnNewButton = new JButton("Add Books");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				AddBooks.main(new String[]{});
+				frame.dispose();
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
