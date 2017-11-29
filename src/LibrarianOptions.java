@@ -51,7 +51,7 @@ public class LibrarianOptions extends JFrame {
 		JButton btnNewButton = new JButton("Add Books");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AddBooks.main(new String[]{});
+				AddBooks.main(new String[] {});
 				frame.dispose();
 			}
 		});
@@ -60,6 +60,7 @@ public class LibrarianOptions extends JFrame {
 		JButton btnViewBooks = new JButton("View Books");
 		btnViewBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ViewBooks.main(new String[] {});
 			}
 		});
 		btnViewBooks.setFont(new Font("Tahoma", Font.PLAIN, 13));
